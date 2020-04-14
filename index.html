@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Offline Media</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <main>
+    <h1>Offline Media</h1>
+
+    <!-- Details -->
+    <details>
+        <summary>Technical details of implementation</summary>
+        This demo demonstrates media caching.
+        <br>
+        The caching has been implemented with <strong>Service Workers</strong> and <strong>Cache API</strong>.
+        <br>
+        The image/video source should use cross origin headers.
+        <br>
+        For testing purposes, images and videos can be used from 
+        <a href="https://imgur.com/" target="_blank">Imgur</a>.
+        <br>
+        To check caching use browser offline mode(or just turn off internet connection) and reload the page.
+        Even without the internet you will be able to see content of the page.
+    </details>
+
+    <!-- Media form -->
+    <div class="media-form-wrapper">
+      <input type="text" id="add-media-url" placeholder="Media Url">
+      <select name="mediaType" id="add-media-type">
+        <option value="">Select Type</option>
+        <option value="img">Image</option>
+        <option value="video">Video</option>
+      </select>
+      <button id="add-media-btn">Add</button>
+    </div>
+
+    <!-- Previews -->
+    <section class="previews-wrapper">
+      <div class="media-wrapper">
+        <img src="" alt="">
+        <p id="img-text">No image has been selected</p>
+      </div>
+
+      <div class="media-wrapper">
+        <video src="" controls></video>
+        <p id="video-text">No video has been selected</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
